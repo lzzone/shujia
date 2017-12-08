@@ -1,0 +1,230 @@
+<ion-view id="home" view-title="首页">
+	<header id="header" class="search clearfix">
+		<div class="neirongheader">
+			<a href="template/source.html" class="sousuo">					
+				<label for="searchinp" class="icon ion-ios-search-strong"></label>
+				<input type="text" id="searchinp" placeholder="内存条8G">
+			</a>
+			<a href="javascript:;" class="denglu" ng-click="openModal()">登录</a>			
+		</div>
+		<div id="coverheader"></div>
+	</header>
+	<ion-content id="ioncontent" overflow-scroll="false" has-bouncing="true" lazy-scroll>
+
+		<div class="scrollbar clearfix">
+			<div class="swiper-container swiperheng">
+			  <div class="swiper-wrapper">
+			    <div class="swiper-slide">
+					<img src="images/home/1.jpg" alt="">
+			    </div>
+			    <div class="swiper-slide">
+					<img src="images/home/2.jpg" alt="">
+			    </div>
+			    <div class="swiper-slide">
+					<img src="images/home/3.jpg" alt="">
+			    </div>
+			    <div class="swiper-slide">
+					<img src="images/home/4.jpg" alt="">
+			    </div>
+			    <div class="swiper-slide">
+					<img src="images/home/5.jpg" alt="">
+			    </div>
+			  </div>
+			  <div class="swiper-pagination"></div>
+			</div>
+		</div>
+		<nav id="nav">
+			<ul class="list clearfix">
+				<li>
+					<a href="javascript">
+						<img src="images/home/nav0.png" alt="">
+						<p>应用中心</p>						
+					</a>
+				</li>
+				<li>
+					<a href="javascript:;">
+						<img src="images/home/nav1.png" alt="">
+						<p>物流查询</p>
+					</a>
+				</li>
+				<li>
+					<a href="javascript:;">
+						<img src="images/home/nav2.png" alt="">
+						<p>购物车</p>	
+					</a>
+				</li>
+				<li>
+					<a href="javascript:;">
+						<img src="images/home/nav3.png" alt="">
+						<p>我的中心</p>
+					</a>
+				</li>
+				<li>
+					<a href="javascript:;">
+						<img src="images/home/nav4.png" alt="">
+						<p>手机充值</p>
+					</a>
+				</li>
+				<li>
+					<a href="javascript:;">
+						<img src="images/home/nav5.png" alt="">
+						<p>慧赚钱</p>
+					</a>
+				</li>
+				<li>
+					<a href="javascript">
+						<img src="images/home/nav6.png" alt="">
+						<p>风向标</p>
+					</a>
+				</li>
+				<li>
+					<a href="javascript:;">
+						<img src="images/home/nav7.png" alt="">
+						<p>我的关注</p>
+					</a>
+				</li>
+				<li>
+					<a href="javascript:;">
+						<img src="images/home/nav8.png" alt="">
+						<p>林林超市</p>
+					</a>
+				</li>
+				<li>
+					<a href="javascript:;">
+						<img src="images/home/nav9.png" alt="">
+						<p>充值缴费</p>
+					</a>
+				</li>
+			</ul>
+		</nav>
+
+
+		<div class="vertical clearfix">
+			<div class="verticalleft">
+				<i>林林<span class="kuaibao">快报</span><span class="maohao">:</span></i>	
+			</div>
+			<div class="swiper-container swipershu">
+			  <div class="swiper-wrapper">
+			    <div class="swiper-slide">
+					<span class="qiang">抢</span>
+					<span class="xiangxi">今日男装有活动，等待着你的参与</span>
+			    </div>
+			    <div class="swiper-slide">			
+			    	<span class="bao">爆</span>
+					<span class="xiangxi">林林零食商店全场低至九折</span>
+				</div>
+			    <div class="swiper-slide">
+					<span class="qiang">抢</span>
+					<span class="xiangxi">男装清仓，赶紧来抢，赶紧来买</span>
+			    </div>
+			    <div class="swiper-slide">
+					<span class="bao">爆</span>
+					<span class="xiangxi">林林零食满299减99，赶紧来领券啦</span>
+			    </div>
+			  </div>
+			</div>
+		</div>
+<!-- 注意两个repeat使用时的嵌套 -->
+		<div id="shangpinglist">
+			<div class="aishenghuo" ng-repeat="data in data.first">
+				<div class="top">
+					<img image-lazy-src="{{data.topimg}}" alt="" image-lazy-loader="circles">
+				</div>
+				<div class="bottom clearfix">
+					<div class="two" ng-repeat="data1 in data.liangge">
+						<div class="zibufen">
+							<strong>{{data1.one}}</strong>
+							<p>{{data1.two}}</p>
+							<!-- <span class="youhui">更多优惠GO!</span>		 -->
+						</div>
+						<div class="tupianbufen">
+							<img image-lazy-src="{{data1.three}}" alt="" image-lazy-loader="circles" image-lazy-distance-from-bottom-to-load="1">
+						</div>
+					</div>
+<!-- 					<div class="two">
+						<div class="zibufen">
+							<strong>林林家电</strong>
+							<p>领券减1500</p>
+						</div>
+						<div class="tupianbufen">
+							<img src="images/home/aishenghuo2.jpg" alt="">
+						</div>
+					</div>
+					<div class="two">
+						<div class="zibufen">
+							<strong>林林超市</strong>
+							<p>家清199减100</p>
+						</div>
+						<div class="tupianbufen">
+							<img src="images/home/aishenghuo3.jpg" alt="">
+						</div>
+					</div>
+					<div class="two">
+						<div class="zibufen">
+							<strong>爱家</strong>
+							<p>家具满99减30</p>		
+						</div>
+						<div class="tupianbufen">
+							<img src="images/home/aishenghuo4.jpg" alt="">
+						</div>
+					</div> -->
+					<div class="four" ng-repeat="data2 in data.sige">
+						<div class="zibufen">
+							<strong>{{data2.one}}</strong>
+							<p>{{data2.two}}</p>
+						</div>
+						<div class="tupianbufen">
+							<img image-lazy-src="{{data2.three}}" alt="" image-lazy-loader="circles" image-lazy-distance-from-bottom-to-load="1">
+						</div>
+					</div>
+<!-- 					<div class="four">
+						<div class="zibufen">
+							<strong>爱美丽</strong>
+							<p>美妆0元试用</p>
+						</div>
+						<div class="tupianbufen">
+							<img src="images/home/aishenghuo6.jpg" alt="">
+						</div>
+					</div>
+					<div class="four">
+						<div class="zibufen">
+							<strong>爱吃</strong>
+							<p>低至9.9包邮</p>
+						</div>
+						<div class="tupianbufen">
+							<img src="images/home/aishenghuo7.jpg" alt="">
+						</div>
+					</div>
+					<div class="four">
+						<div class="zibufen">
+							<strong>爱穿搭</strong>
+							<p>大牌清仓1折</p>
+						</div>
+						<div class="tupianbufen">
+							<img src="images/home/aishenghuo8.jpg" alt="">
+						</div>
+					</div> -->
+				</div>
+			</div>
+		</div>
+		<ion-infinite-scroll on-infinite="shanglashuaxin()" distance="10%"></ion-infinite-scroll> 
+	</ion-content>
+	<script id="my-modal.html" type="text/ng-template">
+    <ion-modal-view>
+		<ion-header-bar class="bar-positive modalheader">
+			<h1 class="title dengluh1">登录</h1>
+			<a class="button denglua" ng-click="closeModal();">关闭</a>
+		</ion-header-bar>
+		<ion-content>
+			<div id="shuoming">
+				<p>不好意思没有连接数据库，你登录不上</p>
+			</div>
+		</ion-content>
+	</ion-modal-view>
+</script>
+</ion-view>
+
+
+
+
+

@@ -1,0 +1,46 @@
+<ion-view view-title="购物车">
+ 	<header id="carheader" class="clearfix">
+		<h3>购物车(点击商品左侧的小框可删除)</h3>
+	</header>
+
+	<div ng-if="chuanshu.length">
+		<ion-content id="chelist" overflow-scroll="false" has-bouncing="true">
+			<div class="list clearfix" ng-repeat="data in chuanshu">
+				<ion-checkbox class="sfxuan" ng-model="truefalse" ng-click="show(truefalse,data.id)"></ion-checkbox>
+			    <a href="#">
+			      <img ng-src="{{data.image}}">
+			   	</a>
+			   	<div class="right">
+				    <h2>{{data.title}}</h2>
+				    <div class="clearfix xiabu">
+				    	<div class="jiaqian">
+				    		<span>{{data.price}}</span>	
+				    	</div>
+				    	<div class="kongjian">
+					      	<input type="text" class="jian" readonly="true" value="-" ng-click="jian(data.id)">
+					    	<input type="text" class="zhi" readonly="true" ng-model="data.shuliang">
+					   		<input type="text" class="jia" readonly="true" value="+" ng-click="jia(data.id)">	    		
+				    	</div>
+
+				    </div>		   		
+			   	</div>
+			</div>
+
+		</ion-content>
+		<div class="caozuotai">
+			<!-- <ion-checkbox class="zdxuan" mg-model="quanxuanan" ng-click="quanxuan()"></ion-checkbox> -->
+			<div class="heji">
+				<span class="hejizi">合计</span>
+				<span>{{zongjia | number:2}}</span>
+			</div>
+			<div class="qujiesuan" ng-click="qujiesuan()">
+				<span>去结算{{zongjia | number:2}}</span>
+			</div>
+		</div>		
+	</div>
+
+	<div ng-if="!chuanshu.length" class="meiyoushi">
+		<p>您的购物车当前还没东西，快去书城中添加你的书本吧。</p>
+	</div>
+</ion-view>
+

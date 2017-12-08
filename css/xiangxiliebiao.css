@@ -1,0 +1,140 @@
+#xinxihead {
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 999;
+  height: 1.5rem;
+  background-image: url(../images/list/sourceheader-bg.png);
+  background-size: 0.05rem 1.5rem;
+  background-repeat: repeat-x;
+}
+#xinxihead span {
+  display: inline-block;
+  height: 1.5rem;
+  width: 15%;
+  text-align: center;
+  line-height: 1.5rem;
+  font-size: 0.8rem;
+  float: left;
+  cursor: pointer;
+}
+#xinxihead div.headertitle {
+  float: left;
+  width: 70%;
+  height: 1.5rem;
+  line-height: 1.5rem;
+  text-align: center;
+  font-size: 0.625rem;
+}
+#xiangxicon {
+  margin-top: 1.5rem;
+}
+#xiangxixinxi {
+  padding: 0.25rem 0.125rem;
+}
+#xiangxixinxi .top {
+  background-color: #eee;
+}
+#xiangxixinxi .top .topimg {
+  float: left;
+  width: 41%;
+}
+#xiangxixinxi .top .topimg img {
+  width: 6rem;
+  height: 6rem;
+}
+#xiangxixinxi .top div.qitaxinxi {
+  float: right;
+  width: 50%;
+  padding-top: 0.25rem;
+}
+#xiangxixinxi .top div.qitaxinxi p.zuopingming {
+  font-weight: 700;
+  font-size: 0.5rem;
+  line-height: 0.65rem;
+}
+#xiangxixinxi .top div.qitaxinxi p.zuozhe {
+  font-size: 0.4rem;
+  margin-top: 0.5rem;
+  color: lightblue;
+}
+#xiangxixinxi .top div.qitaxinxi p.yeshu {
+  font-size: 0.4rem;
+  line-height: 1rem;
+  color: red;
+}
+#xiangxixinxi .top div.qitaxinxi p.jiage {
+  font-size: 0.4rem;
+  line-height: 1rem;
+  color: red;
+}
+#xiangxixinxi .top div.qitaxinxi p.chubanshe {
+  font-size: 0.35rem;
+  line-height: 1rem;
+}
+#xiangxixinxi .bottomxinxi {
+  padding: 0.375rem 0.125rem;
+}
+#xiangxixinxi .bottomxinxi .zuopingneirong p {
+  text-indent: 2em;
+  line-height: 0.7rem;
+  font-size: 0.5rem;
+}
+#xiangxixinxi .che button.gouwuche {
+  width: 90%;
+  margin-left: 5%;
+  height: 1.5rem;
+  background-color: red;
+  color: #fff;
+  text-align: center;
+  font-size: 1rem;
+  line-height: 1.5rem;
+  border-radius: 0.45rem;
+}
+.zhizhaoceng {
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.zhizhaoceng .mark {
+  position: fixed;
+  z-index: 9999;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  top: 0;
+  background-color: #000;
+  opacity: 0.4;
+  filter: alpha(opacity=40);
+}
+.zhizhaoceng span {
+  display: inline-block;
+  width: 50%;
+  border-radius: 0.5rem;
+  height: 0.75rem;
+  font-size: 0.6rem;
+  color: lightblue;
+  text-align: center;
+  background-color: #868686;
+  line-height: 0.7rem;
+}
+.zhizhaoceng span.already {
+  display: inline-block;
+  width: 80%;
+  border-radius: 0.5rem;
+  height: 0.75rem;
+  font-size: 0.6rem;
+  color: blue;
+  text-align: center;
+  background-color: #868686;
+  line-height: 0.7rem;
+}
+ion-header-bar {
+  height: 1.5rem;
+}

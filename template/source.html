@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="content" content="user-scalable=no,width=device-width,height=device-height,maximum-scale=1,initial-scale=1">
+	<title>搜索</title>	
+	<script>
+		function IsPC() {
+		    var userAgentInfo = navigator.userAgent;
+		    var Agents = ["Android", "iPhone",
+		                "SymbianOS", "Windows Phone",
+		                "iPad", "iPod"];
+		    var flag = true;
+		    for (var v = 0; v < Agents.length; v++) {
+		        if (userAgentInfo.indexOf(Agents[v]) > 0) {
+		            flag = false;
+		            break;
+		        }
+		    }
+		    return flag;
+		}
+ 
+		var flag = IsPC(); //true为PC端，false为手机端
+		var pix=1/window.devicePixelRatio;
+		document.write('<meta name="viewport" content="width=device-width,initial-scale='+pix+',minimum-scale='+pix+',maximum-scale='+pix+'" />');
+
+		var html=document.getElementsByTagName('html')[0];
+
+		var pagewidth=html.getBoundingClientRect().width;
+
+		if(flag) {
+			html.style.height=100+"%";
+			html.style.width=640+"px";
+			html.style.position="relative";
+			html.style.marginTop="0px";
+			html.style.marginLeft="auto";
+			html.style.marginRight="auto";
+			pagewidth=640;
+		}
+		html.style.fontSize=pagewidth/16+"px";
+
+	</script>
+	<link rel="stylesheet" href="../lib/ionic/css/ionic.css">
+	<link rel="stylesheet" href="../css/index.css">
+	<style>
+		#header {
+			background-image: url(../images/home/sourceheader-bg.png);
+			background-repeat: repeat-x;
+			background-size: 0.05rem 1.25rem;
+			width: 100%;
+			height: 1.25rem;
+		}
+		#header .cha {
+			height: 1.25rem;
+			width: 10%;
+			text-align: center;
+			float: left;
+		}
+		#header .cha a {
+			display: inline-block;
+			height: 1.25rem;
+			width: 100%;
+		}
+		#header .cha span {
+			display: inline-block;
+			width: 0.5rem;
+			height: 0.5rem;
+			font-size: 0.4rem;
+			line-height: 1.25rem;
+		}
+		#header .center {
+			width: 90%; 
+			float: left;
+		}
+		#header .center input {
+			width: 85%;
+			border-radius: 0.15rem;
+			padding-left: 0.8rem;
+			height: 0.9rem;
+			margin-top: 0.17rem;
+			line-height: 1.25rem;
+			float: left;
+			border: 1px solid #eee;
+			font-size: 0.4rem;
+		}
+		#header .center span {
+			width: 15%;
+			float: left;
+			display: inline-block;
+			height: 1.25rem;
+			line-height: 1.25rem;
+			text-align: center;
+			font-size: 0.5rem;
+		}
+		#section {
+
+		}
+		#section h4 {
+			font-size: 0.45rem;
+			margin: 0.25rem;
+		}
+		#section div {
+			background-color: #eee;
+			float: left;
+			height: 0.75rem;
+			font-size: 0.4rem;
+			margin: 0.15rem 0.125rem;
+			color: #686868;
+			border-radius: 0.125rem;
+			text-align: center;
+			line-height: 0.5rem;
+			padding: 0.125rem 0.2rem;
+		}
+	</style>
+</head>
+<body>
+	<header id="header" class="clearfix">
+		<div class="cha" id="cha">
+			<a href="../index.html">
+				<span class="icon ion-close-round"></span>
+			</a>
+		</div>
+		<div class="center">
+			<form action="#" class="clearfix">
+				<input type="text" placeholder="大疆超级品牌日">
+				<span class="icon ion-ios-search-strong"></span>
+			</form>
+		</div>
+	</header>
+	<section id="section" class="clearfix">
+		<h4>热门搜索</h4>
+		<div>瑜伽垫</div>
+		<div>哑铃</div>
+		<div>头巾</div>
+		<div>剃须刀</div>
+		<div>橄榄调和油</div>
+		<div>热水壶</div>
+		<div>男装短袖</div>
+		<div>裙子</div>
+		<div>男装短裤</div>
+		<div>领带</div>
+	</section>
+	<!-- // <script src="../lib/ionic/js/ionic.bundle.js"></script> -->
+</body>
+</html>

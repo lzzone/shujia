@@ -1,0 +1,15 @@
+<ion-tabs class="tabs-icon-top" id="tab">
+	<ion-tab title="首页" class="home" icon-on="ion-ios-home" icon-off="ion-ios-home-outline" href="#/tab/home">
+	<!-- 路由和tab结合需要这个name，不然只执行路由，不指定name，会让tab栏显示不出来 -->
+		<ion-nav-view name="home"></ion-nav-view>
+	</ion-tab>
+	<ion-tab title="书城" class="list" icon-on="ion-ios-paper" icon-off="ion-ios-paper-outline" href="#/tab/list">
+		<ion-nav-view name="list"></ion-nav-view>
+	</ion-tab>
+	<ion-tab title="购物车" class="cart" icon-on="ion-ios-cart" icon-off="ion-ios-cart-outline" href="#/tab/cart">
+		<ion-nav-view name="cart"></ion-nav-view>
+	</ion-tab>
+<!-- 	<ion-tab title="个人中心" class="person" icon-on="ion-ios-person" icon-off="ion-ios-person-outline" href="#/tab/person">
+		<ion-nav-view name="people"></ion-nav-view>
+	</ion-tab> -->
+</ion-tabs>

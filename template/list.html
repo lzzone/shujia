@@ -1,0 +1,31 @@
+<ion-view view-title="书城">
+
+	<header id="listheader" class="clearfix">
+		<form id="formcha" class="clearfix">
+			<input type="search" id="search" placeholder="输入书名后点击右边的放大镜按钮可以搜索图书" autofocus x-webkit-speech autocomplete="off">
+			<span class="icon ion-search" ng-click="search()"></span>
+		</form>
+<!-- 				<div class="saixuan">
+			<span menu-toggle="right">筛选</span>
+		</div> -->
+	</header>
+	<ion-content id="listcontent" overflow-scroll="false" has-bouncing="true">
+		<div class="list contentlist" ng-repeat="data in data.books">
+		    <a class="item item-thumbnail-left item-icon-right" href="#/tab/{{data.id}}">
+		      <img ng-src="{{data.images.large}}">
+		      <h2>{{data.title}}</h2>
+		      <p class="chaochu">
+		      	{{data.summary}}
+		      	<span ng-show="!data.summary">简介需自行百度</span>
+		      </p>
+		      <h4 class="jiage" ng-if="data.price">
+		      	价格：<span>{{data.price}}</span>
+		      </h4>
+		      <span class="jiagebuxiang" ng-show="!data.price">￥100</span>
+		      <i class="icon ion-chevron-right tubiao"></i>
+		    </a>
+		</div>
+
+	</ion-content>
+
+</ion-view>

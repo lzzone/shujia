@@ -1,0 +1,48 @@
+<ion-view view-title="林林书城购书平台">
+	<div id="xinxihead" class="clearfix">
+		<span class="icon ion-arrow-left-c" ng-click="goback()"></span>
+		<div class="headertitle">
+			<p>林林书城商品信息</p>
+		</div>
+	</div>
+	<ion-content id="xiangxicon" overflow-scroll="false" has-bouncing="true">
+		<div id="xiangxixinxi">
+			<div class="top clearfix">
+				<div class="topimg">
+					<img ng-src="{{data.images.large}}" alt="">	
+				</div>
+				<div class="qitaxinxi">
+					<p class="zuopingming">{{data.title}}</p>
+					<p class="zuozhe" ng-repeat="zuozhe in data.author">
+						<span>{{zuozhe}}<span ng-if="!$last">,</span></span>
+					</p>
+					<p class="yeshu">
+						{{data.pages}}
+						<span ng-if="data.pages">页</span>
+					</p>
+					<p class="jiage">
+						{{data.price}}
+					</p>
+					<p class="chubanshe">
+						{{data.publisher}}
+					</p>
+				</div>
+			</div>
+			<div class="bottomxinxi">
+				<div class="zuopingneirong">
+					<p>{{data.summary}}</p>
+				</div>
+			</div>
+			<div class="che" ng-click="zhanshi()">
+				<button ng-if="data" class="gouwuche">加入购物车</button>
+			</div>
+
+		</div>
+	</ion-content>
+
+	<div class="zhizhaoceng" ng-if="zhanshichulai">
+		<div class="mark"></div>
+		<span ng-if="nozai">已经加入购物车</span>	
+		<span class="already" ng-if="already">已经在购物车中，请在购物车中查看</span>
+	</div>
+</ion-view>
